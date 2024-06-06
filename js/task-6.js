@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const inputNumber = document.getElementById('inputNumber');
             const boxesContainer = document.getElementById('boxes');
 
+            createButton.addEventListener('click', () => createBoxes(input.value));
             destroyButton.addEventListener('click', destroyBoxes);
-            createButton.addEventListener('click', createBoxes);
 
             function createBoxes() {
                 const amount = parseInt(inputNumber.value);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     size += 10;
                 }
 
-                inputNumber.value = ''; // Clear input value
+                inputNumber.value = ''; 
             }
 
             function destroyBoxes() {

@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     destroyButton.addEventListener('click', destroyBoxes);
+    createButton.addEventListener('click', createBoxes);
 
     function createBoxes(amount) {
         destroyBoxes(); 

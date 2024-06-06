@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
             const destroyButton = document.querySelector('[data-destroy]');
-            const createButton = document.getElementById('[data-create]');
-            const inputNumber = document.getElementById('inputNumber');
-            const boxesContainer = document.getElementById('boxes');
+            const createButton = document.querySelector('[data-create]');
+            const input = document.querySelector('inputNumber');
+            const boxesContainer = document.querySelector('boxes');
 
             createButton.addEventListener('click', () => createBoxes(input.value));
             destroyButton.addEventListener('click', destroyBoxes);
 
             function createBoxes() {
-                const amount = parseInt(inputNumber.value);
+                const amount = parseInt(input.value);
                 if (isNaN(amount) || amount < 1 || amount > 100) {
                     alert("Please enter a number between 1 and 100.");
                     return;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     size += 10;
                 }
 
-                inputNumber.value = ''; 
+                input.value = ''; 
             }
 
             function destroyBoxes() {
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-    function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+            function getRandomHexColor() {
+                return `#${Math.floor(Math.random() * 16777215)
+                .toString(16)
+                .padStart(6, 0)}`;
 }
 
 
